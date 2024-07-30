@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cremas Faciales</title>
+    <style>
+        /* Estilos CSS */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+            padding: 20px;
+        }
+        .image-container {
+            width: 250px; /* Ancho del cuadro */
+            padding: 10px; /* Espaciado interno */
+            border: 1px solid #ccc; /* Borde del cuadro */
+            margin-bottom: 20px; /* Margen inferior */
+        }
+        .image-container img {
+            width: 100%; /* Imagen ocupa todo el ancho del cuadro */
+            display: block; /* Eliminar espacio adicional */
+            margin-bottom: 10px; /* Espacio entre imagen y párrafos */
+        }
+        .boton-agregar {
+            background-color: #4CAF50; /* Color de fondo verde */
+            color: white; /* Color del texto blanco */
+            padding: 10px 20px; /* Espaciado interno */
+            border: none; /* Sin borde */
+            cursor: pointer; /* Cursor apuntador */
+            margin-bottom: 10px; /* Espacio inferior */
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="image-container">
+            <img src="crema1.jpg" alt="Crema 1">
+            <p>190 LPS</p>
+            <p>Usar para piel reseca</p>
+            <button class="boton-agregar" onclick="agregarAlCarrito('Crema 1')">Agregar al Carrito</button>
+        </div>
+        <div class="image-container">
+            <img src="crema2.jpg" alt="Crema 2">
+            <p>900 LPS</p>
+            <p>Usar Antes de Maquillarse</p>
+            <button class="boton-agregar" onclick="agregarAlCarrito('Crema 2')">Agregar al Carrito</button>
+        </div>
+        <div class="image-container">
+            <img src="crema3.jpg" alt="Crema 3">
+            <p>200 LPS</p>
+            <p>Ayuda cada tipo de piel,reparar y aclarar</p>
+            <button class="boton-agregar" onclick="agregarAlCarrito('Crema 3')">Agregar al Carrito</button>
+        </div>
+        <div class="image-container">
+            <img src="crema4.jpg" alt="Crema 4">
+            <p>350 LPS</p>
+            <p>Usarlo despues de bañarse y hecharlo por toda la cara</p>
+            <button class="boton-agregar" onclick="agregarAlCarrito('Crema 4')">Agregar al Carrito</button>
+        </div>
+        <!-- Agrega más imágenes y párrafos según necesites -->
+    </div>
+
+    <script>
+        function agregarAlCarrito(nombreProducto) {
+            alert("Agregado al carrito: " + nombreProducto);
+            // Aquí puedes agregar la lógica para agregar el producto al carrito
+        }
+    </script>
+</body>
+</html>

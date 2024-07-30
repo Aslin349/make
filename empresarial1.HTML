@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos Online</title>
+    <style>
+        /* Estilos CSS */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        #logo {
+            display: flex;
+            align-items: center;
+        }
+        #logo img {
+            height: 80px;
+            margin-right: 10px;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        nav ul li {
+            margin-right: 20px;
+        }
+        .header-vertical {
+            background-color: #f4f4f4;
+            padding: 10px;
+        }
+        .header-vertical ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .header-vertical ul li {
+            margin-bottom: 10px;
+        }
+        .content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 20px;
+        }
+        .content img {
+            width: 200px;
+            margin-bottom: 20px;
+        }
+         #img {
+            height: 10px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div id="logo">
+            <img src="LogoMakeup.png" alt="Logo de la tienda">
+            <input type="text" placeholder="Buscar">
+            <button>Buscar</button>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                
+                <li><a href="#">Pedido</a></li>
+                <!-- Agrega más enlaces según necesites -->
+            </ul>
+        </nav>
+        <div>
+            <button><img src="Carrito.jpg" alt="Carrito"></button>
+            <button onclick="mostrarFormulario()">Registrarse</button>
+
+        <!-- Formulario de registro (oculto inicialmente) -->
+        <div id="formularioRegistro" style="display: none;">
+            <h2>Registro</h2>
+            <form id="formulario">
+                <label for="nombre">Nombre de usuario:</label><br>
+                <input type="text" id="nombre" name="nombre"><br>
+                <label for="email">Correo electrónico:</label><br>
+                <input type="email" id="email" name="email"><br>
+                <label for="password">Contraseña:</label><br>
+                <input type="password" id="password" name="password"><br>
+                <button type="submit">Registrarse</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function mostrarFormulario() {
+            document.getElementById("formularioRegistro").style.display = "block";
+        }
+
+        document.getElementById("formulario").addEventListener("submit", function(event) {
+            event.preventDefault(); // Evita que el formulario se envíe normalmente
+
+            // Obtén los valores de los campos del formulario
+            var nombre = document.getElementById("nombre").value;
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+
+            // Aquí puedes hacer algo con los datos, como enviarlos a un servidor o almacenarlos localmente
+            // Por ejemplo, puedes enviarlos a un servidor utilizando AJAX o Fetch
+
+            // Reinicia el formulario
+            document.getElementById("formulario").reset();
+            // O puedes ocultar el formulario después de enviar los datos
+            document.getElementById("formularioRegistro").style.display = "none";
+        });
+    </script>
+    
+            <button onclick="mostrarFormulario()">Unirse</button>
+<!-- Formulario de registro para el botón "Unirse" -->
+        <div id="formularioUnirse" style="display: none;">
+            <h2>Unirse</h2>
+            <form id="formulario2">
+                <label for="nombre2">Nombre de usuario:</label><br>
+                <input type="text" id="nombre2" name="nombre2" required><br>
+                <label for="email2">Correo electrónico:</label><br>
+                <input type="email" id="email2" name="email2" required><br>
+                <label for="password2">Contraseña:</label><br>
+                <input type="password" id="password2" name="password2" required><br>
+                <button type="submit">Unirse</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("formulario").addEventListener("submit", function(event) {
+            event.preventDefault(); // Evita que el formulario se envíe normalmente
+
+            // Obtén los valores de los campos del formulario
+            var nombre = document.getElementById("nombre").value;
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+
+            // Aquí puedes hacer algo con los datos, como enviarlos a un servidor o almacenarlos localmente
+            // Por ejemplo, puedes enviarlos a un servidor utilizando AJAX o Fetch
+
+            // Reinicia el formulario
+            document.getElementById("formulario").reset();
+        });
+
+        document.getElementById("formulario2").addEventListener("submit", function(event) {
+            event.preventDefault(); // Evita que el formulario se envíe normalmente
+
+            // Obtén los valores de los campos del formulario
+            var nombre2 = document.getElementById("nombre2").value;
+            var email2 = document.getElementById("email2").value;
+            var password2 = document.getElementById("password2").value;
+
+            // Aquí puedes hacer algo con los datos, como enviarlos a un servidor o almacenarlos localmente
+            // Por ejemplo, puedes enviarlos a un servidor utilizando AJAX o Fetch
+
+            // Reinicia el formulario
+            document.getElementById("formulario2").reset();
+        });
+
+        // Función para mostrar el formulario de unirse y ocultar el de registrarse
+        function mostrarFormularioUnirse() {
+            document.getElementById("formularioUnirse").style.display = "block";
+            document.getElementById("formularioRegistro").style.display = "none";
+        }
+</script>
+        </div>
+    </header>
+
+    <div class="content">
+        <div class="header-vertical">
+            <ul>
+                <li><a href="cremas_faciales.html">Cremas Faciales</a></li>
+                <li><a href="Brochas.html">Brochas</a></li>
+                <li><a href="Sombras.html">Sombras</a></li>
+                <li><a href="Base.html">Base</a></li>
+                <li><a href="Corrector.html">Corrector</a></li>
+                <li><a href="Labiales.html">Labiales</a></li>
+                <li><a href="Rimel.html">Rimel</a></li>
+                <li><a href="Categoria.html">Categoria</a></li>
+                <!-- Agrega más enlaces según necesites -->
+            </ul>
+        </div>
+    </div>
+    
+    
+
+</body>
+</html>
+          
+
